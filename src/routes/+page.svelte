@@ -1,9 +1,22 @@
-<h1 class="text-3xl font-bold underline">
-    Hello World
-</h1>
+<script lang="ts">
+    import * as config from '$lib/config';
+    export let data;
+</script>
 
-<style lang="postcss">
-  :global(html) {
-    background-color: theme(colors.gray.100);
-  }
-</style>
+<svelte:head>
+    <title>{config.title}</title>
+</svelte:head>
+
+<section>
+    <ul>
+        {#each data.posts as post}
+            <li>
+                <a href={post.slug.toLowerCase().replaceAll(' ', '-')}>
+                    {post.title}
+                </a>
+                <p>{post.date}</p>
+                <p>{post.description}</p>
+            </li>
+        {/each}
+    </ul>
+</section>
