@@ -3,7 +3,12 @@ title: Hello World 2!
 description: Second test post
 date: '2023-09-23'
 categories:
- - test
+ - test-1
+ - test-2
+ - test-3
+ - test-4
+ - test-5
+ - test-6
 published: true
 author: hrspks
 ---

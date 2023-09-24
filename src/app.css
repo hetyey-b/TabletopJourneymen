@@ -1,3 +1,96 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.date-author {
+    font-style: italic;
+}
+
+h1 {
+    color: var(--brand);
+}
+
+html {
+    font: 1.2rem "Fira Sans", sans-serif;
+
+	/* dark */
+	--brand-dark: #cba6f7;
+	--text-1-dark: #cdd6f4;
+	--text-2-dark: #a6adc8;
+    --surface-1-dark: #6c7086;
+	--surface-2-dark: #585b70;
+    --surface-3-dark: #45475a;
+	--surface-4-dark: #313244;
+	--background-dark: #1e1e2e;
+	--border-dark: #b4befe;
+
+	/* light */
+	--brand-light: #8839ef;
+	--text-1-light: #4c4f69;
+	--text-2-light: #5c5f77;
+	--surface-1-light: #8c8fa1;
+	--surface-2-light: #9ca0b0;
+	--surface-3-light: #acb0be;
+	--surface-4-light: #bcc0cc;
+	--background-light: #eff1f5;
+	--border-light: #7287fd;
+}
+
+:root {
+	color-scheme: dark;
+
+	--brand: var(--brand-dark);
+	--text-1: var(--text-1-dark);
+	--text-2: var(--text-2-dark);
+	--surface-1: var(--surface-1-dark);
+	--surface-2: var(--surface-2-dark);
+	--surface-3: var(--surface-3-dark);
+	--surface-4: var(--surface-4-dark);
+	--background: var(--background-dark);
+	--border: var(--border-dark);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color-scheme: light;
+
+		--brand: var(--brand-light);
+		--text-1: var(--text-1-light);
+		--text-2: var(--text-2-light);
+		--surface-1: var(--surface-1-light);
+		--surface-2: var(--surface-2-light);
+		--surface-3: var(--surface-3-light);
+		--surface-4: var(--surface-4-light);
+		--background: var(--background-light);
+		--border: var(--border-light);
+	}
+}
+
+[color-scheme='dark'] {
+	color-scheme: dark;
+
+	--brand: var(--brand-dark);
+	--text-1: var(--text-1-dark);
+	--text-2: var(--text-2-dark);
+	--surface-1: var(--surface-1-dark);
+	--surface-2: var(--surface-2-dark);
+	--surface-3: var(--surface-3-dark);
+	--surface-4: var(--surface-4-dark);
+	--background: var(--background-dark);
+	--border: var(--border-dark);
+}
+
+[color-scheme='light'] {
+	color-scheme: light;
+
+	--brand: var(--brand-light);
+	--text-1: var(--text-1-light);
+	--text-2: var(--text-2-light);
+	--surface-1: var(--surface-1-light);
+	--surface-2: var(--surface-2-light);
+	--surface-3: var(--surface-3-light);
+	--surface-4: var(--surface-4-light);
+	--background: var(--background-light);
+	--border: var(--border-light);
+}

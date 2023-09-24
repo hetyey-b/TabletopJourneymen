@@ -1,17 +1,31 @@
 <script lang="ts">
-  import "../app.css";
-  
-  import Header from './header.svelte';
-  import Footer from './footer.svelte';
+    import '../app.css';
+
+    import Header from './header.svelte';
+    import Footer from './footer.svelte';
 </script>
 
-<div class="h-full grid">
-    <Header class="h-[5vh]"/>
+<div class="layout">
+    <Header />
 
-    <main class="min-h-[90vh] lg:px-[20%] px-2">
+    <main class="main">
         <slot />
     </main>
 
-    <Footer class="h-[5vh]"/>
+    <Footer />
 </div>
+
+<style>
+   .layout {
+        height: 100%;
+        display: grid;
+    } 
+
+    .main {
+        min-height: 80vh;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+</style>
+
 

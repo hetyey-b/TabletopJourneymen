@@ -1,5 +1,6 @@
 <script lang="ts">
     import * as config from '$lib/config';
+    import { formatDate } from '$lib/util.js';
     export let data;
 </script>
 
@@ -8,15 +9,27 @@
 </svelte:head>
 
 <section>
-    <ul>
+    <ul class="articles-ul">
         {#each data.posts as post}
-            <li>
-                <a href={post.slug.toLowerCase().replaceAll(' ', '-')}>
+            <li class="articles-li">
+                <h1><a href={post.slug}>
                     {post.title}
-                </a>
-                <p>{post.date}</p>
-                <p>{post.description}</p>
+                </a></h1>
+                <p class="date-author">{formatDate(post.date)} - {post.author}</p>
+                <p class="description">{post.description}</p>
             </li>
         {/each}
     </ul>
 </section>
+
+<style>
+    .articles-ul {
+        list-style: none;
+    }
+    .articles-li {
+        border-bottom: 1px solid;
+    }
+    h1 {
+        color: var(--brand);
+    }
+</style>
