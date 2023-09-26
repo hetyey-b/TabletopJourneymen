@@ -3,8 +3,31 @@ a {
     text-decoration: none;
 }
 
+.header-link:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+.header-link:hover:after {
+    transform: scaleX(1);
+}
+
+.underline-link {
+    border-bottom: dashed 2px;
+}
+
 .date-author {
     font-style: italic;
+}
+
+.hover-text-1 {
+    transition: color 0.2s ease;
+}
+
+.hover-text-1:hover {
+    color: var(--text-1);
 }
 
 h1 {

@@ -12,9 +12,11 @@
     <ul class="articles-ul">
         {#each data.posts as post}
             <li class="articles-li">
-                <h1><a href={post.slug}>
-                    {post.title}
-                </a></h1>
+                <h1>
+                    <a class="header-link" href={post.slug}>
+                        {post.title}
+                    </a>
+                </h1>
                 <p class="date-author">{formatDate(post.date)} - {post.author}</p>
                 <p class="description">{post.description}</p>
             </li>
@@ -28,6 +30,9 @@
     }
     .articles-li {
         border-bottom: 1px solid;
+    }
+    .articles-li a {
+        display: inline-block;
     }
     h1 {
         color: var(--brand);

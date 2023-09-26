@@ -3,7 +3,7 @@ title: Hello World!
 description: First test post
 date: '2023-09-22'
 categories:
- - test
+ - test-1
 published: true
 author: hrspks
 ---

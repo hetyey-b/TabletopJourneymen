@@ -5,15 +5,18 @@
 <nav class="navbar">
     <ul class="navbar-ul">
         <li>
-            <a href="/" class="title">
+            <a href="/" class="title header-link">
             <b>{config.title}</b>
             </a>
         </li>
         <li>
-            <a href="/contact">Contact</a>
+            <a class="hover-text-1 header-link" href="/about">About</a>
         </li>
         <li>
-            <a href="/rss.xml" target="_blank">RSS</a>
+            <a class="hover-text-1 header-link" href="/contact">Contact</a>
+        </li>
+        <li>
+            <a class="hover-text-1 header-link" href="/rss.xml" target="_blank">RSS</a>
         </li>
 
         <button class='theme-button' on:click={() => {
